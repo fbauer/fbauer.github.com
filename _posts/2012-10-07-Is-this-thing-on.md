@@ -1,6 +1,6 @@
 ---
-Title: Is this thing on?
-Layout: post
+title: Is this thing on?
+layout: post
 ---
 
 # Is this thing on?
