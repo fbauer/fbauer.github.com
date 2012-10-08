@@ -1,6 +1,10 @@
 ---
 title: Setting up Clojure on Ubuntu
 layout: post
+tags:
+  - emacs
+  - clojure
+  - ubuntu
 ---
 
 I have been a happy Python user for many years now, both in my day job
@@ -29,7 +33,7 @@ Emacs 24.  I used [Damien Cassous
 PPA](https://launchpad.net/~cassou/+archive/emacs) and added the
 Marmalade package archive to my .emacs:
 
-{% highlight elisp %}
+{% highlight lisp %}
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 
