@@ -33,7 +33,7 @@ Emacs 24.  I used [Damien Cassous
 PPA](https://launchpad.net/~cassou/+archive/emacs) and added the
 Marmalade package archive to my .emacs:
 
-{% highlight lisp %}
+{% highlight common-lisp %}
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 
