@@ -2,6 +2,8 @@
 title: Proxy settings on Windows 7
 tags: [emacs, windows, python]
 layout: post
+abstract: This post shows how to configure proxy settings on
+          windows for the Emacs package manager and python virtualenv / pip.
 ---
 
 A quick reminder for myself on how to configure proxy settings on
