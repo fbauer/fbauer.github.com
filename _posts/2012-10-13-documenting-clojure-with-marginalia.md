@@ -29,8 +29,7 @@ It took me longer than it probably should have to realize that I am using Leinin
 With lein2, you can either list the lein-marginalia plugin as part of your user profile in ~/.lein/profiles.clj,
 
 {% highlight clojure %}
-{:user {:plugins [[lein-marginalia "0.7.1"]
-                  ]}}
+{:user {:plugins [[lein-marginalia "0.7.1"]]}}
 {% endhighlight %}
 
 or add it as a plugin to the defproject macro in project.clj:
