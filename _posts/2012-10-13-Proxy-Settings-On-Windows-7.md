@@ -24,7 +24,7 @@ Add this to custom-set-variables in your .emacs. This is the proxy for the
 
 Either on the console
 
-{% highlight shell %}
+{% highlight bat %}
 set http_proxy=http://<url>:<port>
 {% endhighlight %}
 
