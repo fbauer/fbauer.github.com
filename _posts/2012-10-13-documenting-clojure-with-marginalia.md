@@ -17,16 +17,20 @@ documentation](http://fogus.me/fun/marginalia/) and see for yourself.
 
 ## Integration with Leiningen 2
 
-Looking at the Marginalia Readme and following the installation instruction for Leiningen presented me with
+Looking at the Marginalia Readme and following the installation
+instruction for Leiningen presented me with
 
 {% highlight bash %}
 flo@boeserwolf:~/development/dogsofdax$ lein marg
 'marg' is not a task. See 'lein help'.
 {% endhighlight %}
 
-It took me longer than it probably should have to realize that I am using Leiningen 2 (lein2), which changes the format in which plugins are requested.
+It took me longer than it probably should have to realize that I am
+using Leiningen 2 (lein2), which changes the format in which plugins
+are requested.
 
-With lein2, you can either list the lein-marginalia plugin as part of your user profile in ~/.lein/profiles.clj,
+With lein2, you can either list the lein-marginalia plugin as part of
+your user profile in ~/.lein/profiles.clj,
 
 {% highlight clojure %}
 {:user {:plugins [[lein-marginalia "0.7.1"]]}}
@@ -38,3 +42,19 @@ or add it as a plugin to the defproject macro in project.clj:
   :plugins [[lein-marginalia "0.7.1"]]  
 {% endhighlight %}
 
+## Documenting code
+
+Marginalia documentation is a bit sparse currently. The best way to
+see supported features in action is to look at the [Marginalia
+source](https://github.com/fogus/marginalia/blob/master/src/marginalia/core.clj)
+and compare it with [the generated
+html](http://fogus.me/fun/marginalia/).
+
+Marginalia extracts both source code comments and docstrings and
+understands Markdown formatting. There is a difference between
+comments started with a single and a double semicolon:
+
+Comments started with `;` are ignored by Marginalia. They should be
+used for license headers and such. Marginalia only processes comments
+starting with `;;`.  See [this thread on
+stackoverflow](http://stackoverflow.com/questions/5084191/what-is-the-difference-between-and-in-clojure-code-comments).
