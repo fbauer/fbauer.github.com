@@ -44,7 +44,7 @@ or add it as a plugin to the defproject macro in project.clj:
 
 ## Documenting code
 
-Marginalia documentation is a bit sparse currently. The best way to
+Marginalia documentation is currently a bit sparse. The best way to
 see supported features in action is to look at the [Marginalia
 source](https://github.com/fogus/marginalia/blob/master/src/marginalia/core.clj)
 and compare it with [the generated
