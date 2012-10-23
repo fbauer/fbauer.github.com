@@ -7,7 +7,7 @@ tags: [clojure]
 I like to use a code documentation tool that generates nice looking
 html documentation.  For my Python code I generally use
 [Sphinx](http://sphinx.pocoo.org), which is best suited to write
-reference manual style documentation.  As a matter of taste, I prefer
+reference manual style documentation.  As a matter of taste I prefer
 this over the javadoc/doxygen style API documentation.  I was curious
 to see which tools the clojure world uses and stumbled upon
 [Marginalia](https://github.com/fogus/marginalia).  While I am not yet
@@ -58,3 +58,8 @@ Comments started with `;` are ignored by Marginalia. They should be
 used for license headers and such. Marginalia only processes comments
 starting with `;;`.  See [this thread on
 stackoverflow](http://stackoverflow.com/questions/5084191/what-is-the-difference-between-and-in-clojure-code-comments).
+
+Looking at some source files in the clojure standard library it seems
+that a short english description of the function is preferred, without
+special markup constructs for parameters and return values.  That's
+what I will be using as well.
