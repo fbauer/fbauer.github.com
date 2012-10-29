@@ -19,4 +19,4 @@ Emacs Wiki page mentions that the Zenburn and Solarized color themes
 support rainbow delimiters, I installed them as well to try them
 out. I decided to go with the Zenburn color theme for now. I am not
 sure whether I won't prefer a less muted color scheme in the long run,
-but it looks pretty nice and is supposedly easy on the eyes.
+but Zenburn looks pretty nice and is supposedly easy on the eyes.
