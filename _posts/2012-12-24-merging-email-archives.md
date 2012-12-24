@@ -33,31 +33,32 @@ which did the job.
 
 ## Merge the contents of the cur subfolders
 
-I decided on having three mail folders to simplify merging: inbox,
-sent and drafts. As a first step, I created a new folder merged_mails
-and used nautilus to copy all maildir folders there (I checked "view
+I decided on having three mail folders to simplify merging: `inbox`,
+`sent` and `drafts`. As a first step, I created a new folder `merged_mails`
+and used Nautilus to copy all maildir folders there (I checked "view
 hidden files", as some maildir folders were hidden).  Nautilus per
 default merges folders with the same name, and also can be told to
-skip overwriting files with the same name (I am sure that equally
-named mail files have the same content).  As a next step, I again used
+skip overwriting files with the same name (in my case, I was sure that equally
+named mail files had the same content).  In the next step, I again used
 Nautilus to merge all remaining inbox archive folders (named like
-inbox_archive, inbox_2008 and the like) into the inbox folder. It is
-sufficient to copy the cur, tmp and new subfolders; any index files
-outside of those can be deleted.
+`inbox_archive`, `inbox_2008` and so on) into the `inbox` folder. It is
+sufficient to copy the `cur`, `tmp` and `new` subfolders; any index files
+outside of those can be deleted.  Then I repeated this step for `sent` and `drafts`.
+
 
 ## Remove duplicates
 
 I used a python script called
 [doublesdetector.py](http://sebsauvage.net/python/doublesdetector.py)
-by sebsauvage to spit out a list of duplicated messages.
+by Sebastien Sauvage to spit out a list of duplicated messages.
 
 {% highlight sh %}
 python -i doublesdetector.py .
 {% endhighlight %}
 
-I ran the script with the -i option to python, so python dropped me
+I ran the script with the `-i` option to python, so python dropped me
 into an interactive interpreter after running the script. The detected
-duplicate files are stored in a global dict named doubles.  I deleted
+duplicate files are stored in a global dict named `doubles`.  I deleted
 all but the first file with the following snippet:
 
 {% highlight python %}
@@ -69,9 +70,15 @@ all but the first file with the following snippet:
 ... 
 {% endhighlight %}
 
-python -i is a very powerful feature in cases where the usual output
+After this step, I ended up with an empty `drafts` folder, so I
+deleted it.
+
+`python -i` is a very powerful feature in cases where the usual output
 of a script is human readable and hard to post-process, but an
 internal data structure is available that can be accessed directly
-from an interactive interpreter.  It is a good idea to always
-strive for a code structure in scripts that allows this workflow.  I.e. provide a main routine that returns a result and a passes this result on to a reporting function inside an 'if __name__ == "__main__":' block.
+from an interactive interpreter.  It is a good idea to always strive
+for a code structure in scripts that allows this workflow.
+I.e. provide a main routine that returns a result and a passes this
+result on to a reporting function inside an `if __name__ ==
+"__main__":` block.
 
