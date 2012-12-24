@@ -20,7 +20,8 @@ set the archive directories to read-only.  Even though the end result will poten
 
 Google found [this
 post](http://dovecot.org/list/dovecot/2008-March/029736.html) to the
-dovecot mailing list.
+dovecot mailing list by Aaron Gallagher with a link to a [conversion
+script](http://habnabit.org/mb2md.py.gz).
 
 I ran the python script attached to the post as 
 
