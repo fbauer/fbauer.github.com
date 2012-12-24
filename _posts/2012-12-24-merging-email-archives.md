@@ -48,7 +48,7 @@ outside of those can be deleted.
 
 I used a python script called
 [doublesdetector.py](http://sebsauvage.net/python/doublesdetector.py)
-to spit out a list of duplicated messages.
+by sebsauvage to spit out a list of duplicated messages.
 
 {% highlight sh %}
 python doublesdetector.py > duplicates.txt
