@@ -31,4 +31,25 @@ python mb2md.py -i inbox.mbox -o inbox.maildir
 which did the job.
 
 ## Merge the contents of the cur subfolders
+
+I decided on having three mail folders to simplify merging: inbox,
+sent and drafts. As a first step, I created a new folder merged_mails
+and used nautilus to copy all maildir folders there (I checked "view
+hidden files", as some maildir folders were hidden).  Nautilus per
+default merges folders with the same name, and also can be told to
+skip overwriting files with the same name (I am sure that equally
+named mail files have the same content).  As a next step, I again used
+Nautilus to merge all remaining inbox archive folders (named like
+inbox_archive, inbox_2008 and the like) into the inbox folder. It is
+sufficient to copy the cur, tmp and new subfolders; any index files
+outside of those can be deleted.
+
 ## Remove duplicates
+
+I used a python script called
+[doublesdetector.py](http://sebsauvage.net/python/doublesdetector.py)
+to spit out a list of duplicated messages.
+
+{% highlight sh %}
+python doublesdetector.py > duplicates.txt
+{% endhighlight %}
