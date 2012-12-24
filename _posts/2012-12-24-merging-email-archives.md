@@ -18,7 +18,9 @@ set the archive directories to read-only.  Even though the end result will poten
 
 ## Convert all email to maildir format 
 
-Google found this post to the dovecot mailing list http://dovecot.org/list/dovecot/2008-March/029736.html
+Google found [this
+post](http://dovecot.org/list/dovecot/2008-March/029736.html) to the
+dovecot mailing list.
 
 I ran the python script attached to the post as 
 
