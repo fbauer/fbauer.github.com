@@ -52,5 +52,26 @@ I used a python script called
 by sebsauvage to spit out a list of duplicated messages.
 
 {% highlight sh %}
-python doublesdetector.py > duplicates.txt
+python -i doublesdetector.py .
 {% endhighlight %}
+
+I ran the script with the -i option to python, so python dropped me
+into an interactive interpreter after running the script. The detected
+duplicate files are stored in a global dict named doubles.  I deleted
+all but the first file with the following snippet:
+
+{% highlight python %}
+>>> delete = [v[1:] for v in doubles.values()]
+>>> import os
+>>> for fns in delete:
+...     for fn in fns:
+...             os.remove(fn)
+... 
+{% endhighlight %}
+
+python -i is a very powerful feature in cases where the usual output
+of a script is human readable and hard to post-process, but an
+internal data structure is available that can be accessed directly
+from an interactive interpreter.  It is a good idea to always
+strive for a code structure in scripts that allows this workflow.  I.e. provide a main routine that returns a result and a passes this result on to a reporting function inside an 'if __name__ == "__main__":' block.
+
