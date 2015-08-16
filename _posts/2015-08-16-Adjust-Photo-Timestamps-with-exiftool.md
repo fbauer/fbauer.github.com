@@ -22,7 +22,7 @@ Rename the photos according to the new creation date:
 {% endhighlight %}
 
 exiftool knows not to overwrite existing pictures. To prevent having
-two photos the same file name, I shifted the creation date of one of
+two photos share the same file name, I shifted the creation date of one of
 them by one second.
 
 {% highlight bash %}
